@@ -1,299 +1,372 @@
-# AirBnB_clone
-# Team Project By Victor Adly & Maryam Amrani
- * One of the significant undertakings within the ALX Software Engineering program is the first project related to web development.
-The console functions as a command interpreter, akin to a standard Python interactive shell or REPL (Read-Eval-Print Loop). It provides us with the means to execute commands and engage with the web application via a command-line interface, typically within a terminal. Through this command interpreter, our goal is to efficiently manage the objects within our project. This encompasses various tasks, such as creating new objects (e.g., users or places), retrieving objects from storage (like files or databases), performing operations on objects, such as counting and computing statistics, updating object attributes, and when necessary, deleting objects. Furthermore, the console serves as a valuable tool for debugging and identifying logic errors, as it enables us to experiment with the web application using different inputs and commands.
+<h1 align="center">HolbertonBnB</h1>
+<p align="center">An AirBnB clone.</p>
 
- * In a nutshell, "the console"refers to a command-line interface that facilitates interaction with our web application's objects by executing commands and receiving corresponding outputs.
+<p align="center">
+  <img src="https://github.com/bdbaraban/AirBnB_clone_v2/blob/master/assets/hbnb_logo.png"
+	    alt="HolbertonBnB logo">
+</p>
 
- * In our Python-based Airbnb web application, we adhere to the principle that everything is treated as an object, indicating that they are instances of specific classes. This approach ensures a structured representation of various entities within our application. For instance, in our database:
- * 1-An instance (object) of the "User" class represents an individual who has registered an account on the web app. It encompasses essential information such as name, email, and password.
+## Description :house:
 
- * 2-Similarly, an instance (object) of the "State" class signifies a state or province, while an instance of the "City" class denotes a city within that state.
+HolbertonBnB is a complete RESTful web application, integrating file and
+database (MySQL) storage in a back-end API with front-end interfacing in a
+clone of AirBnB. The front-end is designed using HTML5/CSS3 and is served using
+Python Flask. The application is configured on a distributed system - two web
+servers and one load balancer - with Nginx and HAProxy.
 
- * 3-Additionally, we have instances of the "Place" class, which represent temporary accommodations available for booking on the web app. These instances contain pertinent details like the room or suite's name, description, location, price, and availability dates.
+HolbertonBnB is still in active development, with complete functionality set to
+deploy in the coming month:
 
- * This object-oriented approach ensures a structured and organized representation of data within our Airbnb web application.
+* Complete integration of a RESTful API
+* Full configuration of website with domain name
+* Serving of dynamic content using JavaScript
 
- * In this project, we encountered approximately 18 distinct tasks to solve. The advantage of these tasks lies in their ability to dissect the overall project into more manageable segments, allowing us to focus on each task individually.
+<p align="center">
+  <img src="https://github.com/bdbaraban/AirBnB_clone_v2/blob/master/assets/hbnb_stack.png"
+	    alt="HolbertonBnB stack">
+</p>
 
- * Furthermore, as these tasks come with clear prompts to guide us , their execution often becomes relatively straightforward.
-This project have to be  ended in 7 days and demanded a team consisting of two members.
-We began with a thorough review of the concept pages and extensive brainstorming sessions to formulate our project approach. Ultimately, we made the decision to convene daily for as many hours as possible, dedicating our available time and effort to the project.
+---
 
- * The initial tasks we tackled were relatively straightforward. However, there were some among them for which we lacked prior knowledge, prompting us to search online for resources that could provide us with explanations. I distinctly recall one such task: "How to utilize the UUID module in Python."
-<img align="center" alt="hbnb" width="850" src="https://github.com/victor0089/AirBnB_clone/blob/main/hbnb.png">
-<img align="center" alt="hbnb" width="850" src="https://github.com/victor0089/AirBnB_clone/blob/main/hbnb2.png">
-## 0x00.Table of contents
+## NOTE TO 2019 LYFT SOFTWARE ENGINEERING APPRENTICESHIP RECRUITER
 
-* [0x01 Introduction](#0x01-Introduction)
-* [0x02 Environment](#0x02-Environment)
-* [0x03 Installation](#0x03-Installation)
-* [0x04 Testing](#0x04-Testing)
-* [0x05 Usage](#0x05-Usage)
-* [0x06 Authors](#0x06-Authors)
+This web app has been the capstone project of my full-stack education at
+Holberton School and I want to show it off as a demonstration of all the
+skills I've learned at this school.
 
-## 0x01 Introduction
+With that said, I must clarify that it is not complete. As mentioned, the
+clone is a work-in-progress, with full deployment as a RESTful API still to
+come. Finishing touches will be occurring over the next month, my final at
+Holberton.
 
-Team project to build a clone of [AirBnB](https://www.airbnb.com/).
+Recognizing that I am sharing a near-complete project, I additionally put
+together a small Flask app according to the specifications described in the
+application. Please take a look at this separate repository here:
 
-The console is a command interpreter to manage objects abstraction between objects and how they are stored.
+https://github.com/bdbaraban/lyft_apprenticeship_application
 
-To see the fundamental background of the project visit the [Wiki](https://github.com/ralexrivero/AirBnB_clone/wiki).
+Nonetheless, allow me to talk a little more about this AirBnB clone. This
+repository is the second iteration of the project. In the first version
+(viewable [here](https://github.com/bdbaraban/AirBnB_clone)), I, together
+with a cohort mate, built up the initial file storage back-end and
+console from scratch. We pair programmed for most all of this version one work.
 
-The console will perform the following tasks:
+In this second iteration of the project, I, together with a new partner,
+inherited a different version of the same back-end written by a pair of
+Holberton students from an older cohort. We then pair programmed
+to build up the database storage engine of the back-end.
 
-* create a new object
-* retrive an object from a file
-* do operations on objects
-* destroy an object
+In between each version, I put together an entire CSS-styled HTML web page
+for the project. This front-end development was coded independently, although
+the HTML files I personally wrote are only posted in
+[version one](https://github.com/bdbaraban/AirBnB_clone) (the
+[web_static](./web_static) folder in this directory was included in the
+fork). Addtionally, all Shell, Puppet, and Fabric deployment scripts/manifests
+were coded myself.
 
-### Storage
+The README's in both repositories were almost exclusively written myself.
 
-All the classes are handled by the `Storage` engine in the `FileStorage` Class.
+I hope this helps clear things up. I apologize for the confusing versioning, but
+the takeaway is that I've been directly involved in coding at least _an_ implementation
+of everything in this repository. And hey, software development is no fun without
+some confusing version control, right? :sweat_smile: :sob:
 
-## 0x02 Environment
+Please let me know if you have any questions!
 
-<!-- ubuntu -->
-<a href="https://ubuntu.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A" alt="Suite CRM"></a> <!-- bash --> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A" alt="terminal"></a> <!-- python--> <a href="https://www.python.org" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Python&color=FFD43B&logo=python&logoColor=3776AB&labelColor=2F333A" alt="python"></a> </a> <!-- vim --> <a href="https://www.vim.org/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Vim&color=019733&logo=Vim&logoColor=019733&labelColor=2F333A" alt="Suite CRM"></a> <!-- vs code --> <a href="https://code.visualstudio.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Visual%20Studio%20Code&color=5C2D91&logo=Visual%20Studio%20Code&logoColor=5C2D91&labelColor=2F333A" alt="Suite CRM"></a> </a><!-- git --> <a href="https://git-scm.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Git&color=F05032&logo=Git&logoColor=F05032&labelColor=2F333A" alt="git distributed version control system"></a> <!-- github --> <a href="https://github.com" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A" alt="Github"></a>
- <!-- Style guidelines -->
-* Style guidelines:
-  * [pycodestyle (version 2.7.*)](https://pypi.org/project/pycodestyle/)
-  * [PEP8](https://pep8.org/)
+---
 
-All the development and testing was runned over an operating system Ubuntu 20.04 LTS using programming language Python 3.8.3. The editors used were VIM 8.1.2269, VSCode 1.6.1 and Atom 1.58.0 . Control version using Git 2.25.1.
+### Static :page_facing_up:
 
-## 0x03 Installation
+The front-end of HolbertonBnB was designed from scratch using HTML5/CSS3 pages
+integrated using Flask. While the front-end has not yet been officially deployed,
+screenshots are viewable in the README of the [web_flask](./web_flask) directory.
 
-```bash
-git clone https://github.com/victor0089/AirBnB_clone.git
+### Classes :cl:
+
+HolbertonBnB supports the following classes:
+
+* BaseModel
+* User
+* State
+* City
+* Amenity
+* Place
+* Review
+
+## Storage :baggage_claim:
+
+The above classes are handled by one of either two abstracted storage engines,
+depending on the call - [FileStorage](./models/engine/file_storage.py) or
+[DBStorage](./models/engine/db_storage.py).
+
+### FileStorage
+
+The default mode.
+
+In `FileStorage` mode, every time the backend is initialized, HolbertonBnB
+instantiates an instance of `FileStorage` called `storage`. The `storage`
+object is loaded/re-loaded from any class instances stored in the JSON file
+`file.json`. As class instances are created, updated, or deleted, the
+`storage` object is used to register corresponding changes in the `file.json`.
+
+### DBStorage
+
+Run by setting the environmental variables `HBNB_TYPE_STORAGE=db`.
+
+In `DBStorage` mode, every time the backend is initialized, HolbertonBnB
+instantiates an instance of `DBStorage` called `storage`. The `storage` object
+is loaded/re-loaded from the MySQL database specified in the environmental variable
+`HBNB_MYSQL_DB`, using the user `HBNB_MYSQL_USER`, password `HBNB_MYSQL_PWD`, and
+host `HBNB_MYSQL_HOST`. As class instances are created, updated, or deleted, the
+`storage` object is used to register changes in the corresponding MySQL database.
+Connection and querying is achieved using SQLAlchemy.
+
+Note that the databases specified for `DBStorage` to connect to must already be
+defined on the MySQL server. This repository includes scripts
+[setup_mysql_dev.sql](./setup_mysql_dev.sql) and [setup_mysql_test.sql](./setup_mysql_test.sql)
+to set up `hbnb_dev_db` and `hbnb_test_db` databases in a MySQL server,
+respectively.
+
+## Console :computer:
+
+The console is a command line interpreter that permits management of the backend
+of HolbertonBnB. It can be used to handle and manipulate all classes utilized by
+the application (achieved by calls on the `storage` object defined above).
+
+### Using the Console
+
+The HolbertonBnB console can be run both interactively and non-interactively.
+To run the console in non-interactive mode, pipe any command(s) into an execution
+of the file `console.py` at the command line.
+
 ```
-
-change to the `AirBnb` directory and run the command:
-
-```bash
- ./console.py
-```
-
-### Execution
-
-In interactive mode
-
-```bash
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-```
-
-in Non-interactive mode
-
-```bash
 $ echo "help" | ./console.py
 (hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-```
-
-## 0x04 Testing
-
-All the test are defined in the `tests` folder.
-
-### Documentation
-
-* Modules:
-
-```python
-python3 -c 'print(__import__("my_module").__doc__)'
-```
-
-* Classes:
-
-```python
-python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-```
-
-* Functions (inside and outside a class):
-
-```python
-python3 -c 'print(__import__("my_module").my_function.__doc__)'
-```
-
-and
-
-```python
-python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-```
-
-### Python Unit Tests
-
-* unittest module
-* File extension ``` .py ```
-* Files and folders star with ```test_```
-* Organization:for ```models/base.py```, unit tests in: ```tests/test_models/test_base.py```
-* Execution command: ```python3 -m unittest discover tests```
-* or: ```python3 -m unittest tests/test_models/test_base.py```
-
-### run test in interactive mode
-
-```bash
-echo "python3 -m unittest discover tests" | bash
-```
-
-### run test in non-interactive mode
-
-To run the tests in non-interactive mode, and discover all the test, you can use the command:
-
-```bash
-python3 -m unittest discover tests
-```
-
-
-## 0x05 Usage
-
-* Start the console in interactive mode:
-
-```bash
-$ ./console.py
-(hbnb)
-```
-
-* Use help to see the available commands:
-
-```bash
-(hbnb) help
-
 Documented commands (type help <topic>):
 ========================================
 EOF  all  count  create  destroy  help  quit  show  update
 
 (hbnb)
+$
 ```
 
-* Quit the console:
+Alternatively, to use the HolbertonBnB console in interactive mode, run the
+file `console.py` by itself:
 
-```bash
+```
+$ ./console.py
+```
+
+Remember, the console can be run with `storage` instantiated in either `FileStorage`
+or `DBStorage` mode. The above examples instantiate `FileStorage` by default, but
+`DBStorage` can be instantiated like so:
+
+```
+$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py
+```
+
+The console functions identically regardless of the `storage` mode.
+
+While running in interactive mode, the console displays a prompt for input:
+
+```
+$ ./console.py
+(hbnb)
+```
+
+To quit the console, enter the command `quit`, or input an EOF signal
+(`ctrl-D`).
+
+```
+$ ./console.py
 (hbnb) quit
 $
 ```
 
-### Commands
-
-> The commands are displayed in the following format *Command / usage / example with output*
-
-* Create
-
-> *Creates a new instance of a given class. The class' ID is printed and the instance is saved to the file file.json.*
-
-```bash
-create <class>
-
+```
+$ ./console.py
+(hbnb) EOF
+$
 ```
 
-```bash
+### Console Commands
+
+The HolbertonBnB console supports the following commands:
+
+#### create
+* Usage: `create <class> <param 1 name>=<param 1 value> <param 2 name>=<param 2 value> ...`
+
+Creates a new instance of a given class. The class' ID is printed and
+the instance is saved to the file `file.json`. When passing parameter key/value
+pairs, any underscores contained in value strings are replaced by spaces.
+
+```
+$ ./console.py
 (hbnb) create BaseModel
-6cfb47c4-a434-4da7-ac03-2122624c3762
+119be863-6fe5-437e-a180-b9892e8746b8
 (hbnb)
+(hbnb) create State name="California"
+(hbnb) quit
+$ cat file.json ; echo ""
+{"BaseModel.119be863-6fe5-437e-a180-b9892e8746b8": {"updated_at": "2019-02-17T2
+1:30:42.215277", "created_at": "2019-02-17T21:30:42.215277", "__class__": "Base
+Model", "id": "119be863-6fe5-437e-a180-b9892e8746b8"}, {'id': 'd80e0344-63eb-43
+4a-b1e0-07783522124e', 'created_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 
+842160), 'updated_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 842235), 'name
+': 'California'}}
 ```
 
-* Show
+#### show
+* Usage: `show <class> <id>` or `<class>.show(<id>)`
 
-```bash
-show <class> <id>
+Prints the string representation of a class instance based on a given id.
+
 ```
-
-```bash
-(hbnb) show BaseModel 6cfb47c4-a434-4da7-ac03-2122624c3762
-[BaseModel] (a) [BaseModel] (6cfb47c4-a434-4da7-ac03-2122624c3762) {'id': '6cfb47c4-a434-4da7-ac03-2122624c3762', 'created_at': datetime.datetime(2021, 11, 14, 3, 28, 45, 571360), 'updated_at': datetime.datetime(2021, 11, 14, 3, 28, 45, 571389)}
-(hbnb)
-```
-
-* Destroy
-
-> *Deletes an instance of a given class with a given ID.*
-> *Update the file.json*
-
-```bash
+$ ./console.py
 (hbnb) create User
-0c56g2b8-7ffa-42b7-8709-d9d54b76j472
-(hbnb) destroy User 0c56g2b8-7ffa-42b7-8709-d9d54b76j472
-(hbnb) show User 0c56g2b8-7ffa-42b7-8709-d9d54b76j472
-** no instance found **
+1e32232d-5a63-4d92-8092-ac3240b29f46
+(hbnb)
+(hbnb) show User 1e32232d-5a63-4d92-8092-ac3240b29f46
+[User] (1e32232d-5a63-4d92-8092-ac3240b29f46) {'id': '1e32232d-5a63-4d92-8092-a
+c3240b29f46', 'created_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828), 
+'updated_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828)}
+(hbnb)
+(hbnb) User.show(1e32232d-5a63-4d92-8092-ac3240b29f46)
+[User] (1e32232d-5a63-4d92-8092-ac3240b29f46) {'id': '1e32232d-5a63-4d92-8092-a
+c3240b29f46', 'created_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828), 
+'updated_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828)}
 (hbnb)
 ```
 
-* all
+#### destroy
+* Usage: `destroy <class> <id>` or `<class>.destroy(<id>)`
 
-> *Prints all string representation of all instances of a given class.*
-> *If no class is passed, all classes are printed.*
+Deletes a class instance based on a given id.
 
-```bash
-(hbnb) create BaseModel
-e45ddfg9-eb80-6558-99a9-226d4f08s329
-(hbnb) all BaseModel
-["[BaseModel] (4c8f7ebc-257f-4ed1-b26b-e7aacr457697) [BaseModel] (4c8f7ebc-257f-4ed1-b26b-e7aacr457697) {'id': '4c8f7ebc-257f-4ed1-b26b-e7aace457697', 'created_at': datetime.datetime(2021, 11, 13, 22, 19, 19, 447155), 'updated_at': datetime.datetime(2021, 11, 13, 22, 19, 19, 557257), 'name': 'My First Model', 'my_number': 45}"]
-["[BaseMode
+```
+$ ./console.py
+(hbnb) create State
+d2d789cd-7427-4920-aaae-88cbcf8bffe2
+(hbnb) create Place
+3e-8329-4f47-9947-dca80c03d3ed
+(hbnb)
+(hbnb) destroy State d2d789cd-7427-4920-aaae-88cbcf8bffe2
+(hbnb) Place.destroy(03486a3e-8329-4f47-9947-dca80c03d3ed)
+(hbnb) quit
+$ cat file.json ; echo ""
+{}
 ```
 
-* count
+#### all
+* Usage: `all` or `all <class>` or `<class>.all()`
 
-> *Prints the number of instances of a given class.*
+Prints the string representations of all instances of a given class. If no
+class name is provided, the command prints all instances of every class.
 
-```bash
+```
+$ ./console.py
+(hbnb) create BaseModel
+fce2124c-8537-489b-956e-22da455cbee8
+(hbnb) create BaseModel
+450490fd-344e-47cf-8342-126244c2ba99
+(hbnb) create User
+b742dbc3-f4bf-425e-b1d4-165f52c6ff81
+(hbnb) create User
+8f2d75c8-fb82-48e1-8ae5-2544c909a9fe
+(hbnb)
+(hbnb) all BaseModel
+["[BaseModel] (450490fd-344e-47cf-8342-126244c2ba99) {'updated_at': datetime.da
+tetime(2019, 2, 17, 21, 45, 5, 963516), 'created_at': datetime.datetime(2019, 2
+, 17, 21, 45, 5, 963516), 'id': '450490fd-344e-47cf-8342-126244c2ba99'}", "[Bas
+eModel] (fce2124c-8537-489b-956e-22da455cbee8) {'updated_at': datetime.datetime
+(2019, 2, 17, 21, 43, 56, 899348), 'created_at': datetime.datetime(2019, 2, 17,
+21, 43, 56, 899348), 'id': 'fce2124c-8537-489b-956e-22da455cbee8'}"]
+(hbnb)
+(hbnb) User.all()
+["[User] (8f2d75c8-fb82-48e1-8ae5-2544c909a9fe) {'updated_at': datetime.datetim
+e(2019, 2, 17, 21, 44, 44, 428413), 'created_at': datetime.datetime(2019, 2, 17
+, 21, 44, 44, 428413), 'id': '8f2d75c8-fb82-48e1-8ae5-2544c909a9fe'}", "[User] 
+(b742dbc3-f4bf-425e-b1d4-165f52c6ff81) {'updated_at': datetime.datetime(2019, 2
+, 17, 21, 44, 15, 974608), 'created_at': datetime.datetime(2019, 2, 17, 21, 44,
+15, 974608), 'id': 'b742dbc3-f4bf-425e-b1d4-165f52c6ff81'}"]
+(hbnb)
+(hbnb) all
+["[User] (8f2d75c8-fb82-48e1-8ae5-2544c909a9fe) {'updated_at': datetime.datetim
+e(2019, 2, 17, 21, 44, 44, 428413), 'created_at': datetime.datetime(2019, 2, 17
+, 21, 44, 44, 428413), 'id': '8f2d75c8-fb82-48e1-8ae5-2544c909a9fe'}", "[BaseMo
+del] (450490fd-344e-47cf-8342-126244c2ba99) {'updated_at': datetime.datetime(20
+19, 2, 17, 21, 45, 5, 963516), 'created_at': datetime.datetime(2019, 2, 17, 21,
+45, 5, 963516), 'id': '450490fd-344e-47cf-8342-126244c2ba99'}", "[User] (b742db
+c3-f4bf-425e-b1d4-165f52c6ff81) {'updated_at': datetime.datetime(2019, 2, 17, 2
+1, 44, 15, 974608), 'created_at': datetime.datetime(2019, 2, 17, 21, 44, 15, 97
+4608), 'id': 'b742dbc3-f4bf-425e-b1d4-165f52c6ff81'}", "[BaseModel] (fce2124c-8
+537-489b-956e-22da455cbee8) {'updated_at': datetime.datetime(2019, 2, 17, 21, 4
+3, 56, 899348), 'created_at': datetime.datetime(2019, 2, 17, 21, 43, 56, 899348
+), 'id': 'fce2124c-8537-489b-956e-22da455cbee8'}"]
+(hbnb)
+```
+
+#### count
+* Usage: `count <class>` or `<class>.count()`
+
+Retrieves the number of instances of a given class.
+
+```
+$ ./console.py
+(hbnb) create Place
+12c73223-f3d3-4dec-9629-bd19c8fadd8a
+(hbnb) create Place
+aa229cbb-5b19-4c32-8562-f90a3437d301
 (hbnb) create City
-4e01c33e-2564-42c2-b61c-47e512898dad
-(hbnb) create City
-e952b772-80a5-41e9-b728-6bc2dc5c21f4
-(hbnb) count City
+22a51611-17bd-4d8f-ba1b-3bf07d327208
+(hbnb)
+(hbnb) count Place
+2
+(hbnb) city.count()
 1
 (hbnb)
 ```
 
-* update
+#### update
+* Usage: `update <class> <id> <attribute name> "<attribute value>"`
 
-> *Updates an instance based on the class name, id, and kwargs passed.*
-> *Update the file.json*
+Updates a class instance based on a given id with a given key/value attribute
+pair or dictionary of attribute pairs. If `update` is called with a single
+key/value attribute pair, only "simple" attributes can be updated (ie. not
+`id`, `created_at`, and `updated_at`).
+
 ```
-## Authors
-<details>
-    <summary>Victor Adly</summary>
-    <summary>Maryam Amrani</summary>
-    <ul>
-    <li><a href="https://www.github.com/victor0089">Github</a></li>
-    <li><a href="mailto:victor.mecdoors@gmail.com">e-mail</a></li>
-    <li><a href="https://www.github.com/AMaaryam">Github</a></li>
-    <li><a href="mailto:a.maaryam@gmail.com">e-mail</a></li>
-    </ul>
-</details>
-
-## How to add Author file
-`Bash script for generating the list of authors in git repo`
+$ ./console.py
+(hbnb) create User
+6f348019-0499-420f-8eec-ef0fdc863c02
+(hbnb)
+(hbnb) update User 6f348019-0499-420f-8eec-ef0fdc863c02 first_name "Holberton" 
+(hbnb) show User 6f348019-0499-420f-8eec-ef0fdc863c02
+[User] (6f348019-0499-420f-8eec-ef0fdc863c02) {'created_at': datetime.datetime(
+2019, 2, 17, 21, 54, 39, 234382), 'first_name': 'Holberton', 'updated_at': date
+time.datetime(2019, 2, 17, 21, 54, 39, 234382), 'id': '6f348019-0499-420f-8eec-
+ef0fdc863c02'}
+(hbnb)
 ```
-#!/bin/sh
 
-git shortlog -se \
-  | perl -spe 's/^\s+\d+\s+//' \
-  | sed -e '/^CommitSyncScript.*$/d' \
-  > AUTHORS
-  ```
+## Testing :straight_ruler:
+
+Unittests for the HolbertonBnB project are defined in the [tests](./tests)
+folder. To run the entire test suite simultaneously, execute the following command:
+
+```
+$ python3 unittest -m discover tests
+```
+
+Alternatively, you can specify a single test file to run at a time:
+
+```
+$ python3 unittest -m tests/test_console.py
+```
+
+## Authors :black_nib:
+* **Brennan D Baraban** <[bdbaraban](https://github.com/bdbaraban)>
+* **Samie Azad** <[sazad44](https://github.com/sazad44)>
+* **Andrew Lindburg** <[atlindburg](https://github.com/atlindburg)>
+* **Kevin Yook** <[yook00627](https://github.com/yook00627)>
+* **Miranda Evans** <miranda.r.evans@gmail.com>
